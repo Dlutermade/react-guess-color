@@ -58,7 +58,9 @@ function App() {
         <div className="guess-me" style={{ background: color }}></div>
 
         {answers.map((answer) => (
-          <button key={answer}>{answer}</button>
+          <button onClick={handleAnswerClicked(answer)} key={answer}>
+            {answer}
+          </button>
         ))}
 
         {result === Result.Correct && <div className="correct">Correct!</div>}
