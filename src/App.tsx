@@ -3,13 +3,9 @@ import "./App.css";
 
 const getRandomColor = () => {
   const digits = [
-    ...[...Array(10)].map((_, i) => `${i}`),
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
+    ...[...Array(16)].map((_, i) =>
+      i < 10 ? `${i}` : String.fromCharCode("A".charCodeAt(0) + i - 10)
+    ),
   ];
 
   const color = [...Array(6)]
