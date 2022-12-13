@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 const getRandomColor = () => {
+  /*
+
   const digits = [...Array(16)].map((_, i) =>
     i < 10 ? `${i}` : String.fromCharCode("A".charCodeAt(0) + i - 10)
   );
+
   const color = [...Array(6)]
     .map(() => digits[Math.floor(Math.random() * digits.length)])
     .join("");
+  
+  */
+
+  const color = Math.floor(Math.random() * 0xffffff).toString(16);
 
   return `#${color}`;
 };
